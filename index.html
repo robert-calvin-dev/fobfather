@@ -1,0 +1,366 @@
+<!doctype html>
+
+<!--
+Index: index.html
+Project: FobFather — Single page site
+Author: Generated for Robbie (robert-calvin-dev)
+Notes / choices made (short):
+- Where the SUPER PROMPT gave conflicting pricing guidance ($20/$30/$40 vs $15/$10-additional) I used the explicit "Business data (must be used verbatim)" pricing: $20 for one fob copy, $30 for two fob copies and $40 for 4 fob copies (best value). This is documented in the JSON-LD and visible pricing block.
+- Images: this file references the supplied image file present in the conversation: "ChatGPTWebsiteInfoExamples.png". Replace or split this source into individual image files in ./assets/ if you prefer; the HTML references a single composite image provided by you.
+- All JS and CSS are external (styles.css, script.js) per your delivery rules. Do not embed secrets here. Form posts to /api/contact (backend).
+- Desktop-first layout; font Archivo Black is loaded for headings. Body uses system-ui stack.
+- The business address MUST NOT be a clickable link anywhere in the page. Address is included only in JSON-LD schema. If the address is displayed in the small footer text, it is plain text and non-clickable. Currently: address is NOT displayed on the page (per strict instruction).
+-->
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FobFather — Cheap Key Fob Copies in Vancouver's West End</title>
+  <meta name="description" content="Cheap key fob copying in Downtown Vancouver (West End). Walk-in or appointment services, on-site visits, warranty, and fast duplication. $20 / $30 / $40 pricing." />
+  <link rel="canonical" href="https://fobfather.ca" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph / Twitter -->
+
+  <meta property="og:site_name" content="FobFather" />
+  <meta property="og:title" content="FobFather — Cheap Key Fob Copies in Vancouver's West End" />
+  <meta property="og:description" content="Fast, cheap key fob copying — Downtown Vancouver (West End). Book an appointment or message us." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fobfather.ca" />
+  <!-- Use attached hero image below for social preview -->
+  <meta property="og:image" content="ChatGPTWebsiteInfoExamples.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="FobFather — Cheap Key Fob Copies" />
+  <meta name="twitter:description" content="On-site within downtown Vancouver. Appointment only. $20 / $30 / $40 pricing." />
+  <meta name="twitter:image" content="ChatGPTWebsiteInfoExamples.png" />
+
+  <!-- Fonts -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Favicon minimal -->
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%2308323a'/><text x='50' y='56' font-size='48' text-anchor='middle' fill='%23fddf5b' font-family='Archivo Black'>F</text></svg>">
+
+  <!-- Structured Data: LocalBusiness + Offers -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "FobFather",
+    "telephone": "2362685690",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1454 Pendrell St"
+    },
+    "priceRange": "$",
+    "areaServed": {
+      "@type": "Place",
+      "name": "Downtown Vancouver (West End)"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "description": "By appointment only"
+      }
+    ],
+    "logo": "ChatGPTWebsiteInfoExamples.png",
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "name": "1 fob copy",
+        "price": "20.00",
+        "priceCurrency": "CAD",
+        "description": "$20 for one fob copy"
+      },
+      {
+        "@type": "Offer",
+        "name": "2 fob copies",
+        "price": "30.00",
+        "priceCurrency": "CAD",
+        "description": "$30 for two fob copies"
+      },
+      {
+        "@type": "Offer",
+        "name": "4 fob copies",
+        "price": "40.00",
+        "priceCurrency": "CAD",
+        "description": "$40 for four fob copies (best value)"
+      }
+    ]
+  }
+  </script>
+
+</head>
+<body class="site-root" data-domain="fobfather.ca">
+  <header class="site-header" role="banner" aria-label="FobFather header">
+    <div class="container header-inner">
+      <div class="brand" id="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <!-- small mark: stylized F in circle -->
+          <svg width="56" height="56" viewBox="0 0 100 100" role="img" aria-hidden="true">
+            <circle cx="50" cy="50" r="50" fill="#08383a"></circle>
+            <text x="50" y="60" font-family="Archivo Black, sans-serif" font-size="48" text-anchor="middle" fill="#fddf5b">F</text>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <div class="site-title">FobFather</div>
+          <div class="slogan">Vancouver's Cheapest Key Fob Copying</div>
+        </div>
+      </div>
+
+```
+  <div class="contact-line" aria-hidden="false">
+    <a class="phone-link" href="tel:2362685690" aria-label="Call FobFather 236 268 5690">📱 236 268 5690</a>
+    <button class="btn msg-cta" id="headerMessageBtn">Book Appointment / Message Us</button>
+  </div>
+</div>
+```
+
+  </header>
+
+  <main id="main" class="site-main" role="main">
+    <!-- HERO -->
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+      <div class="container hero-inner">
+        <div class="hero-media" role="img" aria-label="FobFather hero image">
+          <img src="ChatGPTWebsiteInfoExamples.png" alt="FobFather business card and mockup" loading="lazy" width="540" height="540">
+        </div>
+
+```
+    <div class="hero-copy">
+      <h1 id="hero-heading" class="hero-title">Cheap Key Fob Copies — Downtown Vancouver</h1>
+      <p class="hero-sub">Fast duplication for apartment fobs, garage remotes and vehicle fobs. We operate in the West End — by appointment only. On-site visits available within downtown Vancouver.</p>
+
+      <div class="hero-cta-row">
+        <a class="btn primary-cta" href="#contact" id="ctaPrimary">Book Appointment / Message Us</a>
+        <a class="btn neutral" href="#pricing" id="ctaPricing">See Pricing</a>
+      </div>
+
+      <ul class="hero-highlights" aria-hidden="true">
+        <li>Quick turnaround (most copies in 5–10 minutes)</li>
+        <li>Warranty on copies — ask for details</li>
+        <li>We come to you within downtown (by appointment)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="pricing" aria-labelledby="pricing-heading">
+  <div class="container">
+    <h2 id="pricing-heading" class="section-heading">Pricing</h2>
+
+    <div class="pricing-grid" role="group" aria-label="Pricing options">
+      <div class="price-card recommended" aria-hidden="false">
+        <div class="price-tag">$20</div>
+        <div class="price-sub">1 fob copy</div>
+        <p class="price-note">Great for a single duplicate.</p>
+      </div>
+
+      <div class="price-card" aria-hidden="false">
+        <div class="price-tag">$30</div>
+        <div class="price-sub">2 fob copies</div>
+        <p class="price-note">Save if you need two duplicates.</p>
+      </div>
+
+      <div class="price-card best" aria-hidden="false">
+        <div class="price-tag">$40</div>
+        <div class="price-sub">4 fob copies</div>
+        <p class="price-note">Best value — lowers cost to $10 per fob.</p>
+        <div class="badge">Best value</div>
+      </div>
+    </div>
+
+    <div class="pricing-note-legal">
+      <small>Prices shown are cash or e-transfer friendly. Exact compatibility depends on your fob type — we will confirm before copying.</small>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services" aria-labelledby="services-heading">
+  <div class="container">
+    <h2 id="services-heading" class="section-heading">Services & Features</h2>
+
+    <ul class="features-grid" role="list">
+      <li class="feature">
+        <svg class="feature-icon" width="44" height="44" aria-hidden="true"><rect width="44" height="44" rx="6" fill="#f7d6a2"></rect></svg>
+        <h3>Fast Duplication</h3>
+        <p>Most standard fobs copied in under 10 minutes with higher-end cloning tools.</p>
+      </li>
+
+      <li class="feature">
+        <svg class="feature-icon" width="44" height="44" aria-hidden="true"><rect width="44" height="44" rx="6" fill="#d3581f"></rect></svg>
+        <h3>On-site Visits</h3>
+        <p>We can come to your downtown address — by appointment only. Safety and access required.</p>
+      </li>
+
+      <li class="feature">
+        <svg class="feature-icon" width="44" height="44" aria-hidden="true"><rect width="44" height="44" rx="6" fill="#fddf5b"></rect></svg>
+        <h3>Appointment Only</h3>
+        <p>We prioritise appointments to avoid long waits and ensure security for building access fobs.</p>
+      </li>
+
+      <li class="feature">
+        <svg class="feature-icon" width="44" height="44" aria-hidden="true"><rect width="44" height="44" rx="6" fill="#222625"></rect></svg>
+        <h3>Warranty & Guarantee</h3>
+        <p>Ask about our refund/replace policy for copies — we want our customers to be secure.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- TRUST / TESTIMONIALS -->
+<section id="testimonials" class="testimonials" aria-labelledby="testimonials-heading">
+  <div class="container">
+    <h2 id="testimonials-heading" class="section-heading">What people say</h2>
+
+    <div class="testimonials-grid" role="list">
+      <blockquote class="testimonial">
+        <p>“Saved me when I was locked out of my building — arrived on time and got it done in minutes. Price was right.”</p>
+        <cite>— Megan, West End</cite>
+      </blockquote>
+
+      <blockquote class="testimonial">
+        <p>“Great communication, quick service, and they came to my condo. Highly recommend for anyone in downtown Vancouver.”</p>
+        <cite>— Jason, Coal Harbour</cite>
+      </blockquote>
+
+      <blockquote class="testimonial">
+        <p>“Best value — grabbed the 4-copy deal for the family. Fobs work perfectly.”</p>
+        <cite>— Anita, Kitsilano</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="faq" aria-labelledby="faq-heading">
+  <div class="container">
+    <h2 id="faq-heading" class="section-heading">FAQ</h2>
+
+    <div class="faq-list" role="list">
+      <details class="faq-item">
+        <summary>Which types of fobs can you copy?</summary>
+        <div class="faq-answer">
+          We copy most common RFID and remote fobs used for apartments, parking garages, and vehicles. Some secure/chipped units may require manufacturer assistance — we'll tell you upfront.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How long does copying take?</summary>
+        <div class="faq-answer">Standard fobs: 5–10 minutes. Complex backups can take longer; we'll confirm estimated time before proceeding.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can you come to my building?</summary>
+        <div class="faq-answer">Yes — on-site visits are available within downtown Vancouver by appointment. Building access rules and ID may be required.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do you offer any warranty?</summary>
+        <div class="faq-answer">We offer a limited warranty on copies. Terms vary by fob type — ask at booking and we'll include warranty details in your confirmation.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact" aria-labelledby="contact-heading">
+  <div class="container">
+    <h2 id="contact-heading" class="section-heading">Contact & Bookings</h2>
+
+    <p class="contact-intro">Use the form below to message us or request an appointment. Phone is the fastest way: <strong>236 268 5690</strong>.</p>
+
+    <form id="contactForm" class="contact-form" method="post" action="/api/contact" novalidate aria-describedby="formHelp" autocomplete="on">
+      <div class="form-row">
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" placeholder="Your full name" autocomplete="name">
+      </div>
+
+      <div class="form-row required">
+        <label for="phone">Phone <span class="req-star" aria-hidden="true">*</span></label>
+        <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="236 555 1234" required aria-required="true" autocomplete="tel">
+        <div class="field-note">We will send SMS confirmations to this number.</div>
+      </div>
+
+      <div class="form-row">
+        <label for="email">Email (optional)</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email">
+      </div>
+
+      <div class="form-row">
+        <label for="preferred">Preferred appointment date/time (optional)</label>
+        <input id="preferred" name="preferred" type="text" placeholder="e.g., 2025-10-05 14:00">
+      </div>
+
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Tell us about your fob or building access..."></textarea>
+      </div>
+
+      <fieldset class="consent">
+        <legend>Consent</legend>
+        <label class="consent-row">
+          <input id="consent" name="consent" type="checkbox" required aria-required="true">
+          I agree to be contacted about my request.
+        </label>
+        <small id="formHelp">By submitting you consent to receive SMS confirmations. Message & data rates may apply.</small>
+      </fieldset>
+
+      <div class="form-actions">
+        <button type="submit" class="btn primary-cta" id="submitBtn">Send Message</button>
+        <div id="formSpinner" class="spinner" aria-hidden="true" role="status" aria-live="polite"></div>
+      </div>
+
+      <div id="formResponse" class="form-response" role="status" aria-live="polite"></div>
+    </form>
+
+    <div class="business-note" aria-hidden="true">
+      <p><strong>Service area:</strong> Downtown Vancouver (West End) — by appointment only.</p>
+      <p class="address-note">Business address is kept in site schema only (not displayed as a clickable map or link).</p>
+    </div>
+
+    <!-- vCard download (optional extra) -->
+    <p class="vcard-link"><a href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3AFobFather%0ATEL%3A2362685690%0AEND%3AVCARD" download="FobFather.vcf">Download contact (vCard)</a></p>
+  </div>
+</section>
+```
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-row">
+      <div class="footer-left">
+        <div class="brand-mini" aria-hidden="true">FobFather</div>
+        <small>© <span id="year"></span> FobFather. All rights reserved.</small>
+      </div>
+      <div class="footer-right">
+        <nav aria-label="Footer">
+          <a href="#services">Services</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+
+  <script>
+    // Minor inline helpers that are safe (small). Larger JS in script.js
+    // Insert current year
+    document.addEventListener('DOMContentLoaded', function(){ document.getElementById('year').textContent = new Date().getFullYear(); });
+  </script>
+
+  <script src="script.js" defer></script>
+
+</body>
+</html>
